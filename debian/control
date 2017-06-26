@@ -19,8 +19,15 @@ Architecture: all
 Depends:
  ${perl:Depends},
  ${misc:Depends},
-Description: Core Perl modules for the Arctica Framework
- FIXME: Some descripttive text needs to go here...
+Description: Arctica Project's BugOUT Core Module
+ The Arctica Project brings forth a remote computing framework of
+ enterprise grade and quality. The Arctica Framework is a highly
+ modularized and thus pluggable for developing alls sort of remote
+ services.
+ .
+ The Arctica::Core::BugOUT module provides an API for other Arctica
+ modules that facilitates and harmonize crash handling, application
+ debugging and normal runtime logging.
 
 Package: arctica-logomatik3000
 Architecture: all
