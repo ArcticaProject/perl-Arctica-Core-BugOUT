@@ -13,7 +13,7 @@
 #
 ################################################################################
 #
-# Copyright (C) 2015-2016 The Arctica Project 
+# Copyright (C) 2015-2016 The Arctica Project
 # http://http://arctica-project.org/
 #
 # This code is dual licensed: strictly GPL-2 or AGPL-3+
@@ -80,20 +80,20 @@ my %bugOutCfg = (
 sub new {
 	my ($className,$options) = @_;
 #print "<<<<<<<<< NEW BUG: $options->{'aexid'}\n";
-	my $BugOUT_self = {	
+	my $BugOUT_self = {
 		dummydata => {
 			somevalue	=> 123,
 			otherinfo	=> "The Other INFO!",
 		},
 		_conf => \%bugOutCfg,
-		isArctica => 1, # Declare that this is a Arctic "something" 
+		isArctica => 1, # Declare that this is a Arctic "something"
 	};
-	
+
 	bless ($BugOUT_self, $className);
 	bugOutCfg(undef,'set','aexid',$options->{'aexid'});
 	bugOutCfg(undef,'set','log_target','stdquiet');
 	bugOutCfg(undef,'set','active',1);
-	
+
 	BugOUT(8,"Initiating DEBUGGER...");
 	# DO SOMETHING ELSE TO TIE INDIVIDUAL SIGNALS TO RESPECTIVE FUNCTIONS
 	# Probably Make a SIG SET sub at some point....
@@ -112,13 +112,13 @@ sub BugOUT_dumpObjects {
 			unless (-d "/tmp/arctica_BugOUT") {
 				mkdir("/tmp/arctica_BugOUT") or BugOUT(1,"Unable to create /tmp/arctica_BugOUT");
 			}
-	
+
 			if  (-d "/tmp/arctica_BugOUT") {
-				my $timeout = Glib::Timeout->add(2000, 
+				my $timeout = Glib::Timeout->add(2000,
 				sub {
 					open(DUMP,">/tmp/arctica_BugOUT/$progid.otdmp");
 					print DUMP time,"\n",Dumper($theObj);
-					close(DUMP);		
+					close(DUMP);
 				} );
 			}
 		}
@@ -202,7 +202,7 @@ sub bugOutCfg {
 						return 1;
 					} else {return 0;}
 				} else {return 0;}
-			} elsif ($valueName eq "log_target") { 
+			} elsif ($valueName eq "log_target") {
 				if ($theValue eq "stdout") {
 					$bugOutCfg{'log_target'} = "stdout";
 				} elsif ($theValue eq "stderr") {
@@ -210,20 +210,20 @@ sub bugOutCfg {
 				} elsif ($theValue eq "stdquiet") {
 					$bugOutCfg{'log_target'} = "stdquiet";
 				} else {return 0;}
-			} elsif ($valueName eq "active") { 
+			} elsif ($valueName eq "active") {
 				if ($theValue eq 1) {
 					$bugOutCfg{'active'} = 1;
 				} elsif ($theValue eq 0) {
 					$bugOutCfg{'active'} = 0;
 				} else {return 0;}
-			} elsif ($valueName eq "aexid") { 
+			} elsif ($valueName eq "aexid") {
 				if ($theValue =~ /^([a-zA-Z0-9\_\-]{16,})$/) {
 					$bugOutCfg{'aexid'} = $1;
 				} else {
 					$bugOutCfg{'aexid'} = undef;
 					return 0;
 				}
-				
+
 			} else {return 0;}
 		} else {return 0;}
 	} else {return 0;}

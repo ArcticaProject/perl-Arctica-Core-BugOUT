@@ -10,7 +10,7 @@ Copyright:
 License: GPL-2 or AGPL-3+
 
 Files: debian/*
-Copyright: 
+Copyright:
  2015-2016, Guangzhou Nianguan Electronics Technology Co.Ltd. <opensource@gznianguan.com>
  2015-2016, Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
 License: GPL-2 or AGPL-3+
@@ -36,7 +36,7 @@ License: GPL-2
 
 License: AGPL-3+
  Arctica Framework is free software; you can redistribute it and/or modify
- it under the terms of the GNU Affero General Public License as published 
+ it under the terms of the GNU Affero General Public License as published
  by the Free Software Foundation; either version 3 of the License, or
  (at your option) any later version.
  .
