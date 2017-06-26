@@ -1,0 +1,31 @@
+2017-06-26 21:25:36 +0200 Mike Gabriel (788c313)
+
+	* debian/: Fix name of .install file. (HEAD -> master, origin/master,
+          origin/HEAD, gh-arctica/master)
+
+2017-06-26 21:02:11 +0200 Mike Gabriel (56a0e6f)
+
+	* debian/control: Improve LONG_DESCRIPTION for arctica-logomatik3000.
+
+2017-06-26 21:01:49 +0200 Mike Gabriel (c440cff)
+
+	* debian/control: Fix SYNOPSIS and LONG_DESCRIPTION for
+          libarctica-core-bugout-perl.
+
+2017-06-26 20:57:18 +0200 Mike Gabriel (db1904b)
+
+	* whitespace cleanups
+
+2017-06-26 20:57:05 +0200 Mike Gabriel (8fd3066)
+
+	* Add arctica-logomatik3000. Arctica BugOUT's colorful console
+          frontend.
+
+2016-09-06 17:29:34 +0200 Mike Gabriel (89c174e)
+
+	* Add license files (AGPL-3+, strictly GPL-2).
+
+2016-09-06 17:02:43 +0200 GZNGET FOSS Team (9c4a711)
+
+	* Initial BugOUT Commit
+
