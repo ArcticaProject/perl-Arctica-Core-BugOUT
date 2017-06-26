@@ -35,7 +35,12 @@ Depends:
  perl,
  ${misc:Depends},
 Description: Arctica BugOUT's colorful console frontend
- A super dirty five minute script...
+ The Arctica Project brings forth a remote computing framework of
+ enterprise grade and quality. The Arctica Framework is a highly
+ modularized and thus pluggable for developing alls sort of remote
+ services.
+ .
+ Das LogoMatik-3000 is a super dirty five minute script...
  .
  Just to display a live view of the TMP /tmp/arctica.log file with some
  colorful output. Once you kill it of you'd probably want to bust out the
