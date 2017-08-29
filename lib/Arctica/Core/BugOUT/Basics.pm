@@ -176,7 +176,7 @@ sub BugOUT {
 			}
 		}
 		if ($bug_level eq 0) {
-			exit 0;
+			exit 1;
 		}
 	}
 	return 1;
