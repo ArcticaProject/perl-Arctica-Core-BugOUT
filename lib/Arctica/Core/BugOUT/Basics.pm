@@ -98,7 +98,7 @@ sub new {
 	# DO SOMETHING ELSE TO TIE INDIVIDUAL SIGNALS TO RESPECTIVE FUNCTIONS
 	# Probably Make a SIG SET sub at some point....
 	$SIG{__WARN__} = sub {BugOUT(1,$_[0]);};
-	$SIG{__DIE__} = sub {BugOUT(0,$_[0]);};
+	$SIG{__DIE__} = sub {BugOUT(1,$_[0]);};#FIXME MAKE THIS WORK PROPERLY AGAIN.... SOME TIME...
 
 	return $BugOUT_self;
 }
